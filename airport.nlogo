@@ -12,13 +12,14 @@ end
 to setup-turtles
   create-turtles passengers-number    ;; uses the value of the number slider to create turtles
   ask turtles [ setxy random-xcor random-ycor ]
+  ask turtles [ set shape "person business" ]
 end
 @#$#@#$#@
 GRAPHICS-WINDOW
 210
 10
-647
-448
+1011
+552
 -1
 -1
 13.0
@@ -31,10 +32,10 @@ GRAPHICS-WINDOW
 1
 1
 1
--16
-16
--16
-16
+-30
+30
+-20
+20
 0
 0
 1
@@ -452,6 +453,12 @@ Polygon -7500403 true true 30 75 75 30 270 225 225 270
 NetLogo 6.0.4
 @#$#@#$#@
 @#$#@#$#@
+1.0
+    org.nlogo.sdm.gui.AggregateDrawing 2
+        org.nlogo.sdm.gui.StockFigure "attributes" "attributes" 1 "FillColor" "Color" 225 225 182 161 127 60 40
+            org.nlogo.sdm.gui.WrappedStock "" "" 0
+        org.nlogo.sdm.gui.ConverterFigure "attributes" "attributes" 1 "FillColor" "Color" 130 188 183 375 147 50 50
+            org.nlogo.sdm.gui.WrappedConverter "" ""
 @#$#@#$#@
 @#$#@#$#@
 @#$#@#$#@
