@@ -1,3 +1,7 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;; Initial Setup ;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+
 to setup
   clear-all
   setup-patches
@@ -188,9 +192,15 @@ end
 
 to setup-turtles
   create-turtles passengers-number    ;; uses the value of the number slider to create turtles
-  ask turtles [ setxy random-xcor random-ycor ]
+  ;;ask turtles [ setxy random-xcor random-ycor ]
+  ask turtles [ setxy -18 0 ]
   ask turtles [ set shape "person business" ]
 end
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;; Movements ;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
 
 to go
   ask turtles [
@@ -200,6 +210,7 @@ to go
   ]
   tick
 end
+
 @#$#@#$#@
 GRAPHICS-WINDOW
 374
@@ -271,7 +282,7 @@ passengers-number
 passengers-number
 0
 100
-100.0
+48.0
 1
 1
 NIL
