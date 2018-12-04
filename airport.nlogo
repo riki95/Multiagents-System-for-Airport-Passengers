@@ -191,6 +191,15 @@ to setup-turtles
   ask turtles [ setxy random-xcor random-ycor ]
   ask turtles [ set shape "person business" ]
 end
+
+to go
+  ask turtles [
+    fd 1            ;; forward 1 step
+    rt random 10    ;; turn right
+    lt random 10    ;; turn left
+  ]
+  tick
+end
 @#$#@#$#@
 GRAPHICS-WINDOW
 374
@@ -242,7 +251,7 @@ BUTTON
 143
 43
 go
-NIL
+go
 T
 1
 T
