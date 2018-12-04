@@ -6,30 +6,184 @@ to setup
 end
 
 to setup-patches
-  ask patches [ set pcolor green ]
+  ask patches [ set pcolor white ]
 
   ;;draw line divisor for metal detector
-  ask patch 10 0 [ set pcolor black ]
-  ask patch 10 1 [ set pcolor black ]
-  ask patch 10 2 [ set pcolor black ]
-  ask patch 10 3 [ set pcolor black ]
-  ask patch 10 4 [ set pcolor black ]
-  ask patch 10 5 [ set pcolor black ]
-  ask patch 10 6 [ set pcolor black ]
-  ask patch 10 7 [ set pcolor black ]
-  ask patch 10 8 [ set pcolor black ]
-  ask patch 10 9 [ set pcolor black ]
-  ask patch 10 10 [ set pcolor black ]
-  ask patch 10 -1 [ set pcolor black ]
-  ask patch 10 -2 [ set pcolor black ]
-  ask patch 10 -3 [ set pcolor black ]
-  ask patch 10 -4 [ set pcolor black ]
-  ask patch 10 -5 [ set pcolor black ]
-  ask patch 10 -6 [ set pcolor black ]
-  ask patch 10 -7 [ set pcolor black ]
-  ask patch 10 -8 [ set pcolor black ]
-  ask patch 10 -9 [ set pcolor black ]
-  ask patch 10 -10 [ set pcolor black ]
+  metal-detector-line
+
+  ;;draw queues
+  queue1-line
+  queue2-line
+  queue3-line
+  queue4-line
+  queue5-line
+  queue6-line
+  queue7-line
+  queue8-line
+  queue9-line
+  queue10-line
+end
+
+to metal-detector-line
+  ask patch 10 0 [ set-metaldetector-color ]
+  ask patch 10 1 [ set-metaldetector-color ]
+  ask patch 10 2 [ set-metaldetector-color ]
+  ask patch 10 3 [ set-metaldetector-color ]
+  ask patch 10 4 [ set-metaldetector-color ]
+  ask patch 10 5 [ set-metaldetector-color ]
+  ask patch 10 6 [ set-metaldetector-color ]
+  ask patch 10 7 [ set-metaldetector-color ]
+  ask patch 10 8 [ set-metaldetector-color ]
+  ask patch 10 9 [ set-metaldetector-color ]
+  ask patch 10 10 [ set-metaldetector-color ]
+  ask patch 10 -1 [ set-metaldetector-color ]
+  ask patch 10 -2 [ set-metaldetector-color ]
+  ask patch 10 -3 [ set-metaldetector-color ]
+  ask patch 10 -4 [ set-metaldetector-color ]
+  ask patch 10 -5 [ set-metaldetector-color ]
+  ask patch 10 -6 [ set-metaldetector-color ]
+  ask patch 10 -7 [ set-metaldetector-color ]
+  ask patch 10 -8 [ set-metaldetector-color ]
+  ask patch 10 -9 [ set-metaldetector-color ]
+  ask patch 10 -10 [ set-metaldetector-color ]
+end
+
+to set-metaldetector-color
+  set pcolor black
+end
+
+to queue1-line
+  ask patch 9 9 [ set-queue-color ]
+  ask patch 8 9 [ set-queue-color ]
+  ask patch 7 9 [ set-queue-color ]
+  ask patch 6 9 [ set-queue-color ]
+  ask patch 5 9 [ set-queue-color ]
+  ask patch 4 9 [ set-queue-color ]
+  ask patch 3 9 [ set-queue-color ]
+  ask patch 2 9 [ set-queue-color ]
+  ask patch 1 9 [ set-queue-color ]
+  ask patch 0 9 [ set-queue-color ]
+end
+
+to queue2-line
+  ask patch 9 7 [ set-queue-color ]
+  ask patch 8 7 [ set-queue-color ]
+  ask patch 7 7 [ set-queue-color ]
+  ask patch 6 7 [ set-queue-color ]
+  ask patch 5 7 [ set-queue-color ]
+  ask patch 4 7 [ set-queue-color ]
+  ask patch 3 7 [ set-queue-color ]
+  ask patch 2 7 [ set-queue-color ]
+  ask patch 1 7 [ set-queue-color ]
+  ask patch 0 7 [ set-queue-color ]
+end
+
+to queue3-line
+  ask patch 9 5 [ set-queue-color ]
+  ask patch 8 5 [ set-queue-color ]
+  ask patch 7 5 [ set-queue-color ]
+  ask patch 6 5 [ set-queue-color ]
+  ask patch 5 5 [ set-queue-color ]
+  ask patch 4 5 [ set-queue-color ]
+  ask patch 3 5 [ set-queue-color ]
+  ask patch 2 5 [ set-queue-color ]
+  ask patch 1 5 [ set-queue-color ]
+  ask patch 0 5 [ set-queue-color ]
+end
+
+to queue4-line
+  ask patch 9 3 [ set-queue-color ]
+  ask patch 8 3 [ set-queue-color ]
+  ask patch 7 3 [ set-queue-color ]
+  ask patch 6 3 [ set-queue-color ]
+  ask patch 5 3 [ set-queue-color ]
+  ask patch 4 3 [ set-queue-color ]
+  ask patch 3 3 [ set-queue-color ]
+  ask patch 2 3 [ set-queue-color ]
+  ask patch 1 3 [ set-queue-color ]
+  ask patch 0 3 [ set-queue-color ]
+end
+
+to queue5-line
+  ask patch 9 1 [ set-queue-color ]
+  ask patch 8 1 [ set-queue-color ]
+  ask patch 7 1 [ set-queue-color ]
+  ask patch 6 1 [ set-queue-color ]
+  ask patch 5 1 [ set-queue-color ]
+  ask patch 4 1 [ set-queue-color ]
+  ask patch 3 1 [ set-queue-color ]
+  ask patch 2 1 [ set-queue-color ]
+  ask patch 1 1 [ set-queue-color ]
+  ask patch 0 1 [ set-queue-color ]
+end
+
+to queue6-line
+  ask patch 9 -1 [ set-queue-color ]
+  ask patch 8 -1 [ set-queue-color ]
+  ask patch 7 -1 [ set-queue-color ]
+  ask patch 6 -1 [ set-queue-color ]
+  ask patch 5 -1 [ set-queue-color ]
+  ask patch 4 -1 [ set-queue-color ]
+  ask patch 3 -1 [ set-queue-color ]
+  ask patch 2 -1 [ set-queue-color ]
+  ask patch 1 -1 [ set-queue-color ]
+  ask patch 0 -1 [ set-queue-color ]
+end
+
+to queue7-line
+  ask patch 9 -3 [ set-queue-color ]
+  ask patch 8 -3 [ set-queue-color ]
+  ask patch 7 -3 [ set-queue-color ]
+  ask patch 6 -3 [ set-queue-color ]
+  ask patch 5 -3 [ set-queue-color ]
+  ask patch 4 -3 [ set-queue-color ]
+  ask patch 3 -3 [ set-queue-color ]
+  ask patch 2 -3 [ set-queue-color ]
+  ask patch 1 -3 [ set-queue-color ]
+  ask patch 0 -3 [ set-queue-color ]
+end
+
+to queue8-line
+  ask patch 9 -5 [ set-queue-color ]
+  ask patch 8 -5 [ set-queue-color ]
+  ask patch 7 -5 [ set-queue-color ]
+  ask patch 6 -5 [ set-queue-color ]
+  ask patch 5 -5 [ set-queue-color ]
+  ask patch 4 -5 [ set-queue-color ]
+  ask patch 3 -5 [ set-queue-color ]
+  ask patch 2 -5 [ set-queue-color ]
+  ask patch 1 -5 [ set-queue-color ]
+  ask patch 0 -5 [ set-queue-color ]
+end
+
+to queue9-line
+  ask patch 9 -7 [ set-queue-color ]
+  ask patch 8 -7 [ set-queue-color ]
+  ask patch 7 -7 [ set-queue-color ]
+  ask patch 6 -7 [ set-queue-color ]
+  ask patch 5 -7 [ set-queue-color ]
+  ask patch 4 -7 [ set-queue-color ]
+  ask patch 3 -7 [ set-queue-color ]
+  ask patch 2 -7 [ set-queue-color ]
+  ask patch 1 -7 [ set-queue-color ]
+  ask patch 0 -7 [ set-queue-color ]
+end
+
+to queue10-line
+  ask patch 9 -9 [ set-queue-color ]
+  ask patch 8 -9 [ set-queue-color ]
+  ask patch 7 -9 [ set-queue-color ]
+  ask patch 6 -9 [ set-queue-color ]
+  ask patch 5 -9 [ set-queue-color ]
+  ask patch 4 -9 [ set-queue-color ]
+  ask patch 3 -9 [ set-queue-color ]
+  ask patch 2 -9 [ set-queue-color ]
+  ask patch 1 -9 [ set-queue-color ]
+  ask patch 0 -9 [ set-queue-color ]
+end
+
+to set-queue-color
+  set pcolor red
 end
 
 to setup-turtles
@@ -39,9 +193,9 @@ to setup-turtles
 end
 @#$#@#$#@
 GRAPHICS-WINDOW
-210
+374
 10
-751
+915
 292
 -1
 -1
