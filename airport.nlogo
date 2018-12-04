@@ -7,6 +7,29 @@ end
 
 to setup-patches
   ask patches [ set pcolor green ]
+
+  ;;draw line divisor for metal detector
+  ask patch 10 0 [ set pcolor black ]
+  ask patch 10 1 [ set pcolor black ]
+  ask patch 10 2 [ set pcolor black ]
+  ask patch 10 3 [ set pcolor black ]
+  ask patch 10 4 [ set pcolor black ]
+  ask patch 10 5 [ set pcolor black ]
+  ask patch 10 6 [ set pcolor black ]
+  ask patch 10 7 [ set pcolor black ]
+  ask patch 10 8 [ set pcolor black ]
+  ask patch 10 9 [ set pcolor black ]
+  ask patch 10 10 [ set pcolor black ]
+  ask patch 10 -1 [ set pcolor black ]
+  ask patch 10 -2 [ set pcolor black ]
+  ask patch 10 -3 [ set pcolor black ]
+  ask patch 10 -4 [ set pcolor black ]
+  ask patch 10 -5 [ set pcolor black ]
+  ask patch 10 -6 [ set pcolor black ]
+  ask patch 10 -7 [ set pcolor black ]
+  ask patch 10 -8 [ set pcolor black ]
+  ask patch 10 -9 [ set pcolor black ]
+  ask patch 10 -10 [ set pcolor black ]
 end
 
 to setup-turtles
@@ -18,8 +41,8 @@ end
 GRAPHICS-WINDOW
 210
 10
-1011
-552
+751
+292
 -1
 -1
 13.0
@@ -32,10 +55,10 @@ GRAPHICS-WINDOW
 1
 1
 1
--30
-30
 -20
 20
+-10
+10
 0
 0
 1
@@ -85,7 +108,7 @@ passengers-number
 passengers-number
 0
 100
-62.0
+100.0
 1
 1
 NIL
@@ -453,12 +476,6 @@ Polygon -7500403 true true 30 75 75 30 270 225 225 270
 NetLogo 6.0.4
 @#$#@#$#@
 @#$#@#$#@
-1.0
-    org.nlogo.sdm.gui.AggregateDrawing 2
-        org.nlogo.sdm.gui.StockFigure "attributes" "attributes" 1 "FillColor" "Color" 225 225 182 161 127 60 40
-            org.nlogo.sdm.gui.WrappedStock "" "" 0
-        org.nlogo.sdm.gui.ConverterFigure "attributes" "attributes" 1 "FillColor" "Color" 130 188 183 375 147 50 50
-            org.nlogo.sdm.gui.WrappedConverter "" ""
 @#$#@#$#@
 @#$#@#$#@
 @#$#@#$#@
