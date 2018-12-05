@@ -46,9 +46,18 @@ end
 
 to go
   ask turtles [
+    let new-patch patch-ahead 1
+
+    if ([pcolor] of patch-here = green) [ set xcor xcor + 1 ]
+
+    if ([pcolor] of patch-here = yellow) [ die]
+
+    if ([pcolor] of new-patch = brown ) [ rt 180 ]
+
     fd 1            ;; forward 1 step
-    rt random 10    ;; turn right
-    lt random 10    ;; turn left
+    rt random 90    ;; turn right
+    lt random 90    ;; turn left
+
   ]
   tick
 end
@@ -447,9 +456,9 @@ SLIDER
 108
 passengers-number
 passengers-number
-0
+1
 100
-2.0
+3.0
 1
 1
 NIL
