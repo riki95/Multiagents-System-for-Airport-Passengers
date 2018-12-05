@@ -15,6 +15,9 @@ to setup-patches
   ;;draw line divisor for metal detector
   metal-detector-line
 
+  ;;draw wall
+  wall-line
+
   ;;draw queues
   queue1-line
   queue2-line
@@ -27,6 +30,35 @@ to setup-patches
   queue9-line
   queue10-line
 end
+
+to setup-turtles
+  create-turtles passengers-number    ;; uses the value of the number slider to create turtles
+  ;;ask turtles [ setxy random-xcor random-ycor ]
+  ask turtles [ setxy -20 0 ]
+  ask turtles [ set shape "person business" ]
+  ask turtles [ set size 2 ]
+end
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;; Movements ;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+
+to go
+  ask turtles [
+    fd 1            ;; forward 1 step
+    rt random 10    ;; turn right
+    lt random 10    ;; turn left
+  ]
+  tick
+end
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;; Drawings ;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
 
 to metal-detector-line
   ask patch 10 0 [ set-metaldetector-color ]
@@ -54,6 +86,163 @@ end
 
 to set-metaldetector-color
   set pcolor black
+end
+
+to wall-line
+
+  ;;top wall
+  ask patch 20 10 [ set-wallline-color ]
+  ask patch 19 10 [ set-wallline-color ]
+  ask patch 18 10 [ set-wallline-color ]
+  ask patch 17 10 [ set-wallline-color ]
+  ask patch 16 10 [ set-wallline-color ]
+  ask patch 15 10 [ set-wallline-color ]
+  ask patch 14 10 [ set-wallline-color ]
+  ask patch 13 10 [ set-wallline-color ]
+  ask patch 12 10 [ set-wallline-color ]
+  ask patch 11 10 [ set-wallline-color ]
+  ask patch 10 10 [ set-wallline-color ]
+  ask patch 9 10 [ set-wallline-color ]
+  ask patch 8 10 [ set-wallline-color ]
+  ask patch 7 10 [ set-wallline-color ]
+  ask patch 6 10 [ set-wallline-color ]
+  ask patch 5 10 [ set-wallline-color ]
+  ask patch 4 10 [ set-wallline-color ]
+  ask patch 3 10 [ set-wallline-color ]
+  ask patch 2 10 [ set-wallline-color ]
+  ask patch 1 10 [ set-wallline-color ]
+  ask patch 0 10 [ set-wallline-color ]
+
+  ask patch -20 10 [ set-wallline-color ]
+  ask patch -19 10 [ set-wallline-color ]
+  ask patch -18 10 [ set-wallline-color ]
+  ask patch -17 10 [ set-wallline-color ]
+  ask patch -16 10 [ set-wallline-color ]
+  ask patch -15 10 [ set-wallline-color ]
+  ask patch -14 10 [ set-wallline-color ]
+  ask patch -13 10 [ set-wallline-color ]
+  ask patch -12 10 [ set-wallline-color ]
+  ask patch -11 10 [ set-wallline-color ]
+  ask patch -10 10 [ set-wallline-color ]
+  ask patch -9 10 [ set-wallline-color ]
+  ask patch -8 10 [ set-wallline-color ]
+  ask patch -7 10 [ set-wallline-color ]
+  ask patch -6 10 [ set-wallline-color ]
+  ask patch -5 10 [ set-wallline-color ]
+  ask patch -4 10 [ set-wallline-color ]
+  ask patch -3 10 [ set-wallline-color ]
+  ask patch -2 10 [ set-wallline-color ]
+  ask patch -1 10 [ set-wallline-color ]
+  ask patch -0 10 [ set-wallline-color ]
+
+  ;;bottom wall
+  ask patch 20 -10 [ set-wallline-color ]
+  ask patch 19 -10 [ set-wallline-color ]
+  ask patch 18 -10 [ set-wallline-color ]
+  ask patch 17 -10 [ set-wallline-color ]
+  ask patch 16 -10 [ set-wallline-color ]
+  ask patch 15 -10 [ set-wallline-color ]
+  ask patch 14 -10 [ set-wallline-color ]
+  ask patch 13 -10 [ set-wallline-color ]
+  ask patch 12 -10 [ set-wallline-color ]
+  ask patch 11 -10 [ set-wallline-color ]
+  ask patch 10 -10 [ set-wallline-color ]
+  ask patch 9 -10 [ set-wallline-color ]
+  ask patch 8 -10 [ set-wallline-color ]
+  ask patch 7 -10 [ set-wallline-color ]
+  ask patch 6 -10 [ set-wallline-color ]
+  ask patch 5 -10 [ set-wallline-color ]
+  ask patch 4 -10 [ set-wallline-color ]
+  ask patch 3 -10 [ set-wallline-color ]
+  ask patch 2 -10 [ set-wallline-color ]
+  ask patch 1 -10 [ set-wallline-color ]
+  ask patch 0 -10 [ set-wallline-color ]
+
+  ask patch -20 -10 [ set-wallline-color ]
+  ask patch -19 -10 [ set-wallline-color ]
+  ask patch -18 -10 [ set-wallline-color ]
+  ask patch -17 -10 [ set-wallline-color ]
+  ask patch -16 -10 [ set-wallline-color ]
+  ask patch -15 -10 [ set-wallline-color ]
+  ask patch -14 -10 [ set-wallline-color ]
+  ask patch -13 -10 [ set-wallline-color ]
+  ask patch -12 -10 [ set-wallline-color ]
+  ask patch -11 -10 [ set-wallline-color ]
+  ask patch -10 -10 [ set-wallline-color ]
+  ask patch -9 -10 [ set-wallline-color ]
+  ask patch -8 -10 [ set-wallline-color ]
+  ask patch -7 -10 [ set-wallline-color ]
+  ask patch -6 -10 [ set-wallline-color ]
+  ask patch -5 -10 [ set-wallline-color ]
+  ask patch -4 -10 [ set-wallline-color ]
+  ask patch -3 -10 [ set-wallline-color ]
+  ask patch -2 -10 [ set-wallline-color ]
+  ask patch -1 -10 [ set-wallline-color ]
+  ask patch -0 -10 [ set-wallline-color ]
+
+  ;;left wall
+  ask patch -20 2 [ set-wallline-color ]
+  ask patch -20 3 [ set-wallline-color ]
+  ask patch -20 4 [ set-wallline-color ]
+  ask patch -20 5 [ set-wallline-color ]
+  ask patch -20 6 [ set-wallline-color ]
+  ask patch -20 7 [ set-wallline-color ]
+  ask patch -20 8 [ set-wallline-color ]
+  ask patch -20 9 [ set-wallline-color ]
+  ask patch -20 10 [ set-wallline-color ]
+
+  ask patch -20 -2 [ set-wallline-color ]
+  ask patch -20 -3 [ set-wallline-color ]
+  ask patch -20 -4 [ set-wallline-color ]
+  ask patch -20 -5 [ set-wallline-color ]
+  ask patch -20 -6 [ set-wallline-color ]
+  ask patch -20 -7 [ set-wallline-color ]
+  ask patch -20 -8 [ set-wallline-color ]
+  ask patch -20 -9 [ set-wallline-color ]
+  ask patch -20 -10 [ set-wallline-color ]
+
+  ;;right wall
+  ask patch 20 2 [ set-wallline-color ]
+  ask patch 20 3 [ set-wallline-color ]
+  ask patch 20 4 [ set-wallline-color ]
+  ask patch 20 5 [ set-wallline-color ]
+  ask patch 20 6 [ set-wallline-color ]
+  ask patch 20 7 [ set-wallline-color ]
+  ask patch 20 8 [ set-wallline-color ]
+  ask patch 20 9 [ set-wallline-color ]
+  ask patch 20 10 [ set-wallline-color ]
+
+  ask patch 20 -2 [ set-wallline-color ]
+  ask patch 20 -3 [ set-wallline-color ]
+  ask patch 20 -4 [ set-wallline-color ]
+  ask patch 20 -5 [ set-wallline-color ]
+  ask patch 20 -6 [ set-wallline-color ]
+  ask patch 20 -7 [ set-wallline-color ]
+  ask patch 20 -8 [ set-wallline-color ]
+  ask patch 20 -9 [ set-wallline-color ]
+  ask patch 20 -10 [ set-wallline-color ]
+
+  ;;entrance
+  ask patch -20 1 [ set-entrance-color ]
+  ask patch -20 0 [ set-entrance-color ]
+  ask patch -20 -1 [ set-entrance-color ]
+
+  ;;exit
+  ask patch 20 1 [ set-exit-color ]
+  ask patch 20 0 [ set-exit-color ]
+  ask patch 20 -1 [ set-exit-color ]
+end
+
+to set-wallline-color
+  set pcolor brown
+end
+
+to set-entrance-color
+  set pcolor green
+end
+
+to set-exit-color
+  set pcolor yellow
 end
 
 to queue1-line
@@ -189,28 +378,6 @@ end
 to set-queue-color
   set pcolor red
 end
-
-to setup-turtles
-  create-turtles passengers-number    ;; uses the value of the number slider to create turtles
-  ;;ask turtles [ setxy random-xcor random-ycor ]
-  ask turtles [ setxy -18 0 ]
-  ask turtles [ set shape "person business" ]
-end
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;; Movements ;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;
-
-to go
-  ask turtles [
-    fd 1            ;; forward 1 step
-    rt random 10    ;; turn right
-    lt random 10    ;; turn left
-  ]
-  tick
-end
-
 @#$#@#$#@
 GRAPHICS-WINDOW
 374
@@ -233,8 +400,8 @@ GRAPHICS-WINDOW
 20
 -10
 10
-0
-0
+1
+1
 1
 ticks
 30.0
@@ -282,11 +449,84 @@ passengers-number
 passengers-number
 0
 100
-48.0
+2.0
 1
 1
 NIL
 HORIZONTAL
+
+SWITCH
+16
+133
+121
+166
+Queue1
+Queue1
+1
+1
+-1000
+
+SWITCH
+126
+133
+231
+166
+Queue2
+Queue2
+1
+1
+-1000
+
+MONITOR
+9
+296
+159
+341
+Passengers before MD
+1
+17
+1
+11
+
+MONITOR
+171
+297
+311
+342
+Passengers in queue
+1
+17
+1
+11
+
+MONITOR
+329
+299
+468
+344
+Passengers after MD
+1
+17
+1
+11
+
+PLOT
+142
+386
+342
+536
+Graphic
+NIL
+NIL
+0.0
+10.0
+0.0
+10.0
+true
+false
+"" ""
+PENS
+"default" 1.0 0 -16777216 true "" "plot count turtles"
 
 @#$#@#$#@
 ## WHAT IS IT?
