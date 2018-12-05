@@ -54,9 +54,13 @@ to go
 
     if ([pcolor] of new-patch = brown ) [ rt 180 ]
 
-    fd 1            ;; forward 1 step
-    rt random 90    ;; turn right
-    lt random 90    ;; turn left
+    if ([pcolor] of patch-here = red ) [ set xcor xcor + 1]
+
+    if ([pcolor] of patch-here = white) [
+      fd 1            ;; forward 1 step
+      rt random 90    ;; turn right
+      lt random 90    ;; turn left
+    ]
 
   ]
   tick
@@ -240,6 +244,17 @@ to wall-line
   ask patch 20 1 [ set-exit-color ]
   ask patch 20 0 [ set-exit-color ]
   ask patch 20 -1 [ set-exit-color ]
+
+  ;;separators
+  ask patch -1 8 [ set-wallline-color ]
+  ask patch -1 6 [ set-wallline-color ]
+  ask patch -1 4 [ set-wallline-color ]
+  ask patch -1 2 [ set-wallline-color ]
+  ask patch -1 0 [ set-wallline-color ]
+  ask patch -1 -2 [ set-wallline-color ]
+  ask patch -1 -4 [ set-wallline-color ]
+  ask patch -1 -6 [ set-wallline-color ]
+  ask patch -1 -8 [ set-wallline-color ]
 end
 
 to set-wallline-color
@@ -255,136 +270,154 @@ to set-exit-color
 end
 
 to queue1-line
-  ask patch 9 9 [ set-queue-color ]
-  ask patch 8 9 [ set-queue-color ]
-  ask patch 7 9 [ set-queue-color ]
-  ask patch 6 9 [ set-queue-color ]
-  ask patch 5 9 [ set-queue-color ]
-  ask patch 4 9 [ set-queue-color ]
-  ask patch 3 9 [ set-queue-color ]
-  ask patch 2 9 [ set-queue-color ]
-  ask patch 1 9 [ set-queue-color ]
-  ask patch 0 9 [ set-queue-color ]
+  ifelse (queue1) [
+    ask patch 9 9 [ set-queueopened-color ]
+    ask patch 8 9 [ set-queueopened-color ]
+    ask patch 7 9 [ set-queueopened-color ]
+    ask patch 6 9 [ set-queueopened-color ]
+    ask patch 5 9 [ set-queueopened-color ]
+    ask patch 4 9 [ set-queueopened-color ]
+    ask patch 3 9 [ set-queueopened-color ]
+    ask patch 2 9 [ set-queueopened-color ]
+    ask patch 1 9 [ set-queueopened-color ]
+    ask patch 0 9 [ set-queueopened-color ]
+  ]
+  [
+    ask patch 9 9 [ set-queueclosed-color ]
+    ask patch 8 9 [ set-queueclosed-color ]
+    ask patch 7 9 [ set-queueclosed-color ]
+    ask patch 6 9 [ set-queueclosed-color ]
+    ask patch 5 9 [ set-queueclosed-color ]
+    ask patch 4 9 [ set-queueclosed-color ]
+    ask patch 3 9 [ set-queueclosed-color ]
+    ask patch 2 9 [ set-queueclosed-color ]
+    ask patch 1 9 [ set-queueclosed-color ]
+    ask patch 0 9 [ set-queueclosed-color ]
+  ]
 end
 
 to queue2-line
-  ask patch 9 7 [ set-queue-color ]
-  ask patch 8 7 [ set-queue-color ]
-  ask patch 7 7 [ set-queue-color ]
-  ask patch 6 7 [ set-queue-color ]
-  ask patch 5 7 [ set-queue-color ]
-  ask patch 4 7 [ set-queue-color ]
-  ask patch 3 7 [ set-queue-color ]
-  ask patch 2 7 [ set-queue-color ]
-  ask patch 1 7 [ set-queue-color ]
-  ask patch 0 7 [ set-queue-color ]
+  ask patch 9 7 [ set-queueclosed-color ]
+  ask patch 8 7 [ set-queueclosed-color ]
+  ask patch 7 7 [ set-queueclosed-color ]
+  ask patch 6 7 [ set-queueclosed-color ]
+  ask patch 5 7 [ set-queueclosed-color ]
+  ask patch 4 7 [ set-queueclosed-color ]
+  ask patch 3 7 [ set-queueclosed-color ]
+  ask patch 2 7 [ set-queueclosed-color ]
+  ask patch 1 7 [ set-queueclosed-color ]
+  ask patch 0 7 [ set-queueclosed-color ]
 end
 
 to queue3-line
-  ask patch 9 5 [ set-queue-color ]
-  ask patch 8 5 [ set-queue-color ]
-  ask patch 7 5 [ set-queue-color ]
-  ask patch 6 5 [ set-queue-color ]
-  ask patch 5 5 [ set-queue-color ]
-  ask patch 4 5 [ set-queue-color ]
-  ask patch 3 5 [ set-queue-color ]
-  ask patch 2 5 [ set-queue-color ]
-  ask patch 1 5 [ set-queue-color ]
-  ask patch 0 5 [ set-queue-color ]
+  ask patch 9 5 [ set-queueclosed-color ]
+  ask patch 8 5 [ set-queueclosed-color ]
+  ask patch 7 5 [ set-queueclosed-color ]
+  ask patch 6 5 [ set-queueclosed-color ]
+  ask patch 5 5 [ set-queueclosed-color ]
+  ask patch 4 5 [ set-queueclosed-color ]
+  ask patch 3 5 [ set-queueclosed-color ]
+  ask patch 2 5 [ set-queueclosed-color ]
+  ask patch 1 5 [ set-queueclosed-color ]
+  ask patch 0 5 [ set-queueclosed-color ]
 end
 
 to queue4-line
-  ask patch 9 3 [ set-queue-color ]
-  ask patch 8 3 [ set-queue-color ]
-  ask patch 7 3 [ set-queue-color ]
-  ask patch 6 3 [ set-queue-color ]
-  ask patch 5 3 [ set-queue-color ]
-  ask patch 4 3 [ set-queue-color ]
-  ask patch 3 3 [ set-queue-color ]
-  ask patch 2 3 [ set-queue-color ]
-  ask patch 1 3 [ set-queue-color ]
-  ask patch 0 3 [ set-queue-color ]
+  ask patch 9 3 [ set-queueclosed-color ]
+  ask patch 8 3 [ set-queueclosed-color ]
+  ask patch 7 3 [ set-queueclosed-color ]
+  ask patch 6 3 [ set-queueclosed-color ]
+  ask patch 5 3 [ set-queueclosed-color ]
+  ask patch 4 3 [ set-queueclosed-color ]
+  ask patch 3 3 [ set-queueclosed-color ]
+  ask patch 2 3 [ set-queueclosed-color ]
+  ask patch 1 3 [ set-queueclosed-color ]
+  ask patch 0 3 [ set-queueclosed-color ]
 end
 
 to queue5-line
-  ask patch 9 1 [ set-queue-color ]
-  ask patch 8 1 [ set-queue-color ]
-  ask patch 7 1 [ set-queue-color ]
-  ask patch 6 1 [ set-queue-color ]
-  ask patch 5 1 [ set-queue-color ]
-  ask patch 4 1 [ set-queue-color ]
-  ask patch 3 1 [ set-queue-color ]
-  ask patch 2 1 [ set-queue-color ]
-  ask patch 1 1 [ set-queue-color ]
-  ask patch 0 1 [ set-queue-color ]
+  ask patch 9 1 [ set-queueclosed-color ]
+  ask patch 8 1 [ set-queueclosed-color ]
+  ask patch 7 1 [ set-queueclosed-color ]
+  ask patch 6 1 [ set-queueclosed-color ]
+  ask patch 5 1 [ set-queueclosed-color ]
+  ask patch 4 1 [ set-queueclosed-color ]
+  ask patch 3 1 [ set-queueclosed-color ]
+  ask patch 2 1 [ set-queueclosed-color ]
+  ask patch 1 1 [ set-queueclosed-color ]
+  ask patch 0 1 [ set-queueclosed-color ]
 end
 
 to queue6-line
-  ask patch 9 -1 [ set-queue-color ]
-  ask patch 8 -1 [ set-queue-color ]
-  ask patch 7 -1 [ set-queue-color ]
-  ask patch 6 -1 [ set-queue-color ]
-  ask patch 5 -1 [ set-queue-color ]
-  ask patch 4 -1 [ set-queue-color ]
-  ask patch 3 -1 [ set-queue-color ]
-  ask patch 2 -1 [ set-queue-color ]
-  ask patch 1 -1 [ set-queue-color ]
-  ask patch 0 -1 [ set-queue-color ]
+  ask patch 9 -1 [ set-queueclosed-color ]
+  ask patch 8 -1 [ set-queueclosed-color ]
+  ask patch 7 -1 [ set-queueclosed-color ]
+  ask patch 6 -1 [ set-queueclosed-color ]
+  ask patch 5 -1 [ set-queueclosed-color ]
+  ask patch 4 -1 [ set-queueclosed-color ]
+  ask patch 3 -1 [ set-queueclosed-color ]
+  ask patch 2 -1 [ set-queueclosed-color ]
+  ask patch 1 -1 [ set-queueclosed-color ]
+  ask patch 0 -1 [ set-queueclosed-color ]
 end
 
 to queue7-line
-  ask patch 9 -3 [ set-queue-color ]
-  ask patch 8 -3 [ set-queue-color ]
-  ask patch 7 -3 [ set-queue-color ]
-  ask patch 6 -3 [ set-queue-color ]
-  ask patch 5 -3 [ set-queue-color ]
-  ask patch 4 -3 [ set-queue-color ]
-  ask patch 3 -3 [ set-queue-color ]
-  ask patch 2 -3 [ set-queue-color ]
-  ask patch 1 -3 [ set-queue-color ]
-  ask patch 0 -3 [ set-queue-color ]
+  ask patch 9 -3 [ set-queueclosed-color ]
+  ask patch 8 -3 [ set-queueclosed-color ]
+  ask patch 7 -3 [ set-queueclosed-color ]
+  ask patch 6 -3 [ set-queueclosed-color ]
+  ask patch 5 -3 [ set-queueclosed-color ]
+  ask patch 4 -3 [ set-queueclosed-color ]
+  ask patch 3 -3 [ set-queueclosed-color ]
+  ask patch 2 -3 [ set-queueclosed-color ]
+  ask patch 1 -3 [ set-queueclosed-color ]
+  ask patch 0 -3 [ set-queueclosed-color ]
 end
 
 to queue8-line
-  ask patch 9 -5 [ set-queue-color ]
-  ask patch 8 -5 [ set-queue-color ]
-  ask patch 7 -5 [ set-queue-color ]
-  ask patch 6 -5 [ set-queue-color ]
-  ask patch 5 -5 [ set-queue-color ]
-  ask patch 4 -5 [ set-queue-color ]
-  ask patch 3 -5 [ set-queue-color ]
-  ask patch 2 -5 [ set-queue-color ]
-  ask patch 1 -5 [ set-queue-color ]
-  ask patch 0 -5 [ set-queue-color ]
+  ask patch 9 -5 [ set-queueclosed-color ]
+  ask patch 8 -5 [ set-queueclosed-color ]
+  ask patch 7 -5 [ set-queueclosed-color ]
+  ask patch 6 -5 [ set-queueclosed-color ]
+  ask patch 5 -5 [ set-queueclosed-color ]
+  ask patch 4 -5 [ set-queueclosed-color ]
+  ask patch 3 -5 [ set-queueclosed-color ]
+  ask patch 2 -5 [ set-queueclosed-color ]
+  ask patch 1 -5 [ set-queueclosed-color ]
+  ask patch 0 -5 [ set-queueclosed-color ]
 end
 
 to queue9-line
-  ask patch 9 -7 [ set-queue-color ]
-  ask patch 8 -7 [ set-queue-color ]
-  ask patch 7 -7 [ set-queue-color ]
-  ask patch 6 -7 [ set-queue-color ]
-  ask patch 5 -7 [ set-queue-color ]
-  ask patch 4 -7 [ set-queue-color ]
-  ask patch 3 -7 [ set-queue-color ]
-  ask patch 2 -7 [ set-queue-color ]
-  ask patch 1 -7 [ set-queue-color ]
-  ask patch 0 -7 [ set-queue-color ]
+  ask patch 9 -7 [ set-queueclosed-color ]
+  ask patch 8 -7 [ set-queueclosed-color ]
+  ask patch 7 -7 [ set-queueclosed-color ]
+  ask patch 6 -7 [ set-queueclosed-color ]
+  ask patch 5 -7 [ set-queueclosed-color ]
+  ask patch 4 -7 [ set-queueclosed-color ]
+  ask patch 3 -7 [ set-queueclosed-color ]
+  ask patch 2 -7 [ set-queueclosed-color ]
+  ask patch 1 -7 [ set-queueclosed-color ]
+  ask patch 0 -7 [ set-queueclosed-color ]
 end
 
 to queue10-line
-  ask patch 9 -9 [ set-queue-color ]
-  ask patch 8 -9 [ set-queue-color ]
-  ask patch 7 -9 [ set-queue-color ]
-  ask patch 6 -9 [ set-queue-color ]
-  ask patch 5 -9 [ set-queue-color ]
-  ask patch 4 -9 [ set-queue-color ]
-  ask patch 3 -9 [ set-queue-color ]
-  ask patch 2 -9 [ set-queue-color ]
-  ask patch 1 -9 [ set-queue-color ]
-  ask patch 0 -9 [ set-queue-color ]
+  ask patch 9 -9 [ set-queueclosed-color ]
+  ask patch 8 -9 [ set-queueclosed-color ]
+  ask patch 7 -9 [ set-queueclosed-color ]
+  ask patch 6 -9 [ set-queueclosed-color ]
+  ask patch 5 -9 [ set-queueclosed-color ]
+  ask patch 4 -9 [ set-queueclosed-color ]
+  ask patch 3 -9 [ set-queueclosed-color ]
+  ask patch 2 -9 [ set-queueclosed-color ]
+  ask patch 1 -9 [ set-queueclosed-color ]
+  ask patch 0 -9 [ set-queueclosed-color ]
 end
 
-to set-queue-color
+to set-queueopened-color
+  set pcolor green
+end
+
+to set-queueclosed-color
   set pcolor red
 end
 @#$#@#$#@
@@ -471,7 +504,7 @@ SWITCH
 166
 Queue1
 Queue1
-1
+0
 1
 -1000
 
@@ -482,7 +515,7 @@ SWITCH
 166
 Queue2
 Queue2
-1
+0
 1
 -1000
 
@@ -536,6 +569,17 @@ false
 "" ""
 PENS
 "default" 1.0 0 -16777216 true "" "plot count turtles"
+
+SWITCH
+237
+133
+342
+166
+Queue3
+Queue3
+1
+1
+-1000
 
 @#$#@#$#@
 ## WHAT IS IT?
