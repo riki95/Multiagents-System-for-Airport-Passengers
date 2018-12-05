@@ -393,7 +393,7 @@ end
 
 to queue5-line
 ifelse (queue5) [
-ask patch 9 1 [ set-queueclosed-color ]
+ask patch 9 1 [ set-queueopened-color ]
     ask patch 8 1 [ set-queueopened-color ]
     ask patch 7 1 [ set-queueopened-color ]
     ask patch 6 1 [ set-queueopened-color ]
@@ -420,7 +420,7 @@ end
 
 to queue6-line
 ifelse (queue6) [
-ask patch 9 -1 [ set-queueclosed-color ]
+ask patch 9 -1 [ set-queueopened-color ]
   ask patch 8 -1 [ set-queueopened-color ]
   ask patch 7 -1 [ set-queueopened-color ]
   ask patch 6 -1 [ set-queueopened-color ]
@@ -642,7 +642,7 @@ SWITCH
 166
 Queue1
 Queue1
-0
+1
 1
 -1000
 
@@ -653,7 +653,7 @@ SWITCH
 166
 Queue2
 Queue2
-0
+1
 1
 -1000
 
@@ -748,7 +748,7 @@ SWITCH
 245
 Queue8
 Queue8
-1
+0
 1
 -1000
 
@@ -759,7 +759,7 @@ SWITCH
 245
 Queue9
 Queue9
-1
+0
 1
 -1000
 
@@ -770,7 +770,7 @@ SWITCH
 284
 Queue10
 Queue10
-0
+1
 1
 -1000
 
