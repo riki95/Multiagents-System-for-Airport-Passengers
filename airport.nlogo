@@ -58,13 +58,13 @@ to go
 
     if ([pcolor] of new-patch = brown ) [ rt 180 ] ;; rotate to avoid walls
 
-    if ([pcolor] of patch-here = brown ) [ set xcor xcor - 1 ] ;; rotate to avoid walls
+    if ([pcolor] of patch-here = brown ) [ set xcor xcor - 2 ] ;; rotate to avoid walls
 
-    if ([pcolor] of patch-here = red ) [ set xcor xcor - 1] ;; if queue closed when I was in queue
+    if ([pcolor] of patch-here = red ) [ set xcor xcor - 2] ;; if queue closed when I was in queue
 
     if ([pcolor] of patch-here = green) [ set xcor xcor + 1 ] ;; queue opened
 
-    if ([pcolor] of patch-here = green - 1) [ set xcor xcor + 1 ] ;; queue opened
+    if ([pcolor] of patch-here = green - 1) [ set xcor xcor + 2 ] ;; queue opened
 
     if ([pcolor] of patch-here = white) [ ;; random walk
       fd 1            ;; forward 1 step
