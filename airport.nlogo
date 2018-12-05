@@ -55,6 +55,7 @@ end
 to go
   ask turtles [
     let new-patch patch-ahead 1
+    let xcornext xcor + 1
 
     if ([pcolor] of new-patch = brown ) [ rt 180 ] ;; rotate to avoid walls
 
@@ -62,7 +63,18 @@ to go
 
     if ([pcolor] of patch-here = red ) [ set xcor xcor - 2] ;; if queue closed when I was in queue
 
-    if ([pcolor] of patch-here = green) [ set xcor xcor + 1 ] ;; queue opened
+    if ([pcolor] of patch-here = green) [ ;; queue opened
+      ifelse (any? turtles-at xcornext ycor) [
+
+      ]
+      [
+      set xcor xcor + 1
+      ]
+    ]
+
+    if ([pcolor] of patch-here = black) [  ] ;;metal detector
+
+
 
     if ([pcolor] of patch-here = green - 1) [ set xcor xcor + 2 ] ;; queue opened
 
@@ -642,7 +654,7 @@ SWITCH
 166
 Queue1
 Queue1
-1
+0
 1
 -1000
 
@@ -653,7 +665,7 @@ SWITCH
 166
 Queue2
 Queue2
-1
+0
 1
 -1000
 
@@ -693,7 +705,7 @@ SWITCH
 166
 Queue3
 Queue3
-1
+0
 1
 -1000
 
