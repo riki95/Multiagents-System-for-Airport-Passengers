@@ -59,7 +59,28 @@ to go
 
     if ([pcolor] of new-patch = brown ) [ rt 180 ] ;; rotate to avoid walls
 
-    if ([pcolor] of patch-here = brown ) [ set xcor xcor - 2 ] ;; rotate to avoid walls
+    if ([pcolor] of patch-here = brown and xcor < 0) [
+      ifelse (ycor < 0) [
+        set xcor xcor + 2
+        set ycor ycor + 2
+      ]
+      [
+        set xcor xcor + 2
+        set ycor ycor - 2
+      ]
+    ] ;; rotate to avoid walls
+
+    if ([pcolor] of patch-here = brown and xcor > 0) [
+      ifelse (ycor < 0) [
+        set xcor xcor - 2
+        set ycor ycor + 2
+      ]
+      [
+        set xcor xcor - 2
+        set ycor ycor - 2
+      ]
+    ] ;; rotate to avoid walls
+
 
     if ([pcolor] of patch-here = red ) [ set xcor xcor - 2] ;; if queue closed when I was in queue
 
@@ -72,7 +93,7 @@ to go
       ]
     ]
 
-    if ([pcolor] of patch-here = black) [  ] ;;metal detector
+    if ([pcolor] of patch-here = black) [ ] ;;metal detector
 
 
 
@@ -641,7 +662,7 @@ passengers-number
 passengers-number
 1
 100
-56.0
+27.0
 1
 1
 NIL
@@ -716,7 +737,7 @@ SWITCH
 206
 Queue4
 Queue4
-1
+0
 1
 -1000
 
@@ -727,7 +748,7 @@ SWITCH
 206
 Queue5
 Queue5
-1
+0
 1
 -1000
 
@@ -738,7 +759,7 @@ SWITCH
 206
 Queue6
 Queue6
-1
+0
 1
 -1000
 
