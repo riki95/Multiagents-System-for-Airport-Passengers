@@ -85,24 +85,30 @@ to go
     if ([pcolor] of patch-here = red ) [ set xcor xcor - 2] ;; if queue closed when I was in queue
 
     if ([pcolor] of patch-here = green) [ ;; queue opened
-      ifelse (any? turtles-at xcornext ycor) [
+      ifelse (any? turtles-at xcornext ycor) [] []
 
-      ]
-      [
-      set xcor xcor + 1
-      ]
+      if (random 5 > 3) [ set xcor xcor + 1]
     ]
 
-    if ([pcolor] of patch-here = black) [ ] ;;metal detector
+    if ([pcolor] of patch-here = black) [
+      face patch-at 20 0
+      fd 1
+    ] ;;metal detector
 
 
 
     if ([pcolor] of patch-here = green - 1) [ set xcor xcor + 2 ] ;; queue opened
 
     if ([pcolor] of patch-here = white) [ ;; random walk
-      fd 1            ;; forward 1 step
-      rt random 90    ;; turn right
-      lt random 90    ;; turn left
+      ifelse (xcor > 1) [
+        face patch-at 20 0
+        fd 1
+      ]
+      [
+        fd 1            ;; forward 1 step
+        rt random 90    ;; turn right
+        lt random 90    ;; turn left
+      ]
     ]
 
      if ([pcolor] of patch-here = yellow) [ die] ;; exit from airport
@@ -662,7 +668,7 @@ passengers-number
 passengers-number
 1
 100
-27.0
+100.0
 1
 1
 NIL
@@ -686,7 +692,7 @@ SWITCH
 166
 Queue2
 Queue2
-0
+1
 1
 -1000
 
@@ -726,7 +732,7 @@ SWITCH
 166
 Queue3
 Queue3
-0
+1
 1
 -1000
 
@@ -737,7 +743,7 @@ SWITCH
 206
 Queue4
 Queue4
-0
+1
 1
 -1000
 
@@ -748,7 +754,7 @@ SWITCH
 206
 Queue5
 Queue5
-0
+1
 1
 -1000
 
@@ -759,7 +765,7 @@ SWITCH
 206
 Queue6
 Queue6
-0
+1
 1
 -1000
 
@@ -803,7 +809,7 @@ SWITCH
 284
 Queue10
 Queue10
-1
+0
 1
 -1000
 
