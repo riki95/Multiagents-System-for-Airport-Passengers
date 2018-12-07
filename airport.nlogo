@@ -92,9 +92,10 @@ to go
     ]
 
     if ([pcolor] of patch-here = black) [
-      if (random 5 > 3) [ face patch-at 20 0
-      fd 1]
-
+      if (random 5 > 3) [
+        face patch-at 20 0
+        fd 1
+      ]
     ] ;;metal detector
 
 
@@ -696,7 +697,7 @@ SWITCH
 166
 Queue1
 Queue1
-1
+0
 1
 -1000
 
@@ -707,7 +708,7 @@ SWITCH
 166
 Queue2
 Queue2
-1
+0
 1
 -1000
 
@@ -731,10 +732,10 @@ Passengers
 tick
 passengers
 0.0
-100.0
+10.0
 0.0
-100.0
-false
+10.0
+true
 false
 "" ""
 PENS
@@ -748,7 +749,7 @@ SWITCH
 166
 Queue3
 Queue3
-1
+0
 1
 -1000
 
@@ -792,7 +793,7 @@ SWITCH
 245
 Queue7
 Queue7
-1
+0
 1
 -1000
 
@@ -803,7 +804,7 @@ SWITCH
 245
 Queue8
 Queue8
-1
+0
 1
 -1000
 
@@ -814,7 +815,7 @@ SWITCH
 245
 Queue9
 Queue9
-1
+0
 1
 -1000
 
@@ -825,7 +826,7 @@ SWITCH
 284
 Queue10
 Queue10
-1
+0
 1
 -1000
 
@@ -836,6 +837,17 @@ MONITOR
 345
 InQueue
 passengers-in-queue
+17
+1
+11
+
+MONITOR
+618
+300
+737
+345
+At Metal Detector
+passengers-at-md
 17
 1
 11
