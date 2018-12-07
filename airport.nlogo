@@ -1,5 +1,6 @@
 globals [
   queuedP
+  countQ
 ]
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -120,6 +121,12 @@ end
 ;;;;;;; Monitors ;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 
+to-report passengers-in-queue
+
+    set countQ count turtles-on patches with [pcolor = green ]
+
+  report countQ
+end
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -714,7 +721,7 @@ PLOT
 518
 Passengers
 in airport
-NIL
+in queue
 0.0
 10.0
 0.0
@@ -723,7 +730,8 @@ true
 false
 "" ""
 PENS
-"default" 1.0 0 -16777216 true "" "plot count turtles"
+"in airport" 1.0 0 -16777216 true "" "plot count turtles"
+"in queue" 1.0 0 -7500403 true "" "plot passengers-in-queue"
 
 SWITCH
 237
@@ -743,7 +751,7 @@ SWITCH
 206
 Queue4
 Queue4
-1
+0
 1
 -1000
 
@@ -754,7 +762,7 @@ SWITCH
 206
 Queue5
 Queue5
-1
+0
 1
 -1000
 
@@ -765,7 +773,7 @@ SWITCH
 206
 Queue6
 Queue6
-1
+0
 1
 -1000
 
@@ -776,7 +784,7 @@ SWITCH
 245
 Queue7
 Queue7
-1
+0
 1
 -1000
 
@@ -787,7 +795,7 @@ SWITCH
 245
 Queue8
 Queue8
-1
+0
 1
 -1000
 
@@ -798,7 +806,7 @@ SWITCH
 245
 Queue9
 Queue9
-1
+0
 1
 -1000
 
@@ -812,6 +820,17 @@ Queue10
 0
 1
 -1000
+
+MONITOR
+534
+300
+599
+345
+InQueue
+passengers-in-queue
+17
+1
+11
 
 @#$#@#$#@
 ## WHAT IS IT?
