@@ -119,6 +119,10 @@ to go
   tick
 end
 
+to stop-simulation
+  if not any? turtles [ stop ]
+end
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;; Monitors ;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -664,7 +668,7 @@ BUTTON
 143
 43
 go
-go update-queues
+go update-queues stop-simulation
 T
 1
 T
@@ -683,9 +687,9 @@ SLIDER
 passengers-number
 passengers-number
 1
-100
-100.0
-1
+500
+111.0
+5
 1
 NIL
 HORIZONTAL
@@ -697,7 +701,7 @@ SWITCH
 166
 Queue1
 Queue1
-0
+1
 1
 -1000
 
@@ -708,7 +712,7 @@ SWITCH
 166
 Queue2
 Queue2
-0
+1
 1
 -1000
 
@@ -724,10 +728,10 @@ count turtles
 11
 
 PLOT
-385
-368
-585
-518
+373
+357
+573
+507
 Passengers
 tick
 passengers
@@ -749,7 +753,7 @@ SWITCH
 166
 Queue3
 Queue3
-0
+1
 1
 -1000
 
@@ -793,7 +797,7 @@ SWITCH
 245
 Queue7
 Queue7
-0
+1
 1
 -1000
 
@@ -804,7 +808,7 @@ SWITCH
 245
 Queue8
 Queue8
-0
+1
 1
 -1000
 
@@ -815,7 +819,7 @@ SWITCH
 245
 Queue9
 Queue9
-0
+1
 1
 -1000
 
@@ -826,7 +830,7 @@ SWITCH
 284
 Queue10
 Queue10
-0
+1
 1
 -1000
 
@@ -851,6 +855,24 @@ passengers-at-md
 17
 1
 11
+
+PLOT
+582
+357
+782
+507
+Metal Detector
+N° Passengers
+Ticks
+0.0
+10.0
+0.0
+10.0
+true
+false
+"" ""
+PENS
+"at metaldetector" 1.0 0 -955883 true "" "plot passengers-at-md"
 
 @#$#@#$#@
 ## WHAT IS IT?
