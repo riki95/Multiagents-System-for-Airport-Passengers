@@ -692,28 +692,28 @@ SWITCH
 166
 Queue2
 Queue2
-1
+0
 1
 -1000
 
 MONITOR
-171
-297
-311
-342
-Passengers in queue
-queuedP
+374
+300
+518
+345
+Passengers in airport
+count turtles
 17
 1
 11
 
 PLOT
-142
-386
-342
-536
-Queued
-queuedP
+385
+368
+585
+518
+Passengers
+in airport
 NIL
 0.0
 10.0
@@ -723,7 +723,7 @@ true
 false
 "" ""
 PENS
-"default" 1.0 0 -16777216 true "" "plot queuedP"
+"default" 1.0 0 -16777216 true "" "plot count turtles"
 
 SWITCH
 237
@@ -732,7 +732,7 @@ SWITCH
 166
 Queue3
 Queue3
-1
+0
 1
 -1000
 
