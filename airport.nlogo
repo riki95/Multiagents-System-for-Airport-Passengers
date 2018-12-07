@@ -92,8 +92,9 @@ to go
     ]
 
     if ([pcolor] of patch-here = black) [
-      face patch-at 20 0
-      fd 1
+      if (random 5 > 3) [ face patch-at 20 0
+      fd 1]
+
     ] ;;metal detector
 
 
@@ -124,6 +125,13 @@ end
 to-report passengers-in-queue
 
     set countQ count turtles-on patches with [pcolor = green ]
+
+  report countQ
+end
+
+to-report passengers-at-md
+
+    set countQ count turtles-on patches with [pcolor = black ]
 
   report countQ
 end
@@ -688,7 +696,7 @@ SWITCH
 166
 Queue1
 Queue1
-0
+1
 1
 -1000
 
@@ -699,7 +707,7 @@ SWITCH
 166
 Queue2
 Queue2
-0
+1
 1
 -1000
 
@@ -720,18 +728,18 @@ PLOT
 585
 518
 Passengers
-in airport
-in queue
+tick
+passengers
 0.0
-10.0
+100.0
 0.0
-10.0
-true
+100.0
+false
 false
 "" ""
 PENS
-"in airport" 1.0 0 -16777216 true "" "plot count turtles"
-"in queue" 1.0 0 -7500403 true "" "plot passengers-in-queue"
+"in airport" 1.0 0 -14070903 true "" "plot count turtles"
+"in queue" 1.0 0 -11085214 true "" "plot passengers-in-queue"
 
 SWITCH
 237
@@ -740,7 +748,7 @@ SWITCH
 166
 Queue3
 Queue3
-0
+1
 1
 -1000
 
@@ -784,7 +792,7 @@ SWITCH
 245
 Queue7
 Queue7
-0
+1
 1
 -1000
 
@@ -795,7 +803,7 @@ SWITCH
 245
 Queue8
 Queue8
-0
+1
 1
 -1000
 
@@ -806,7 +814,7 @@ SWITCH
 245
 Queue9
 Queue9
-0
+1
 1
 -1000
 
@@ -817,7 +825,7 @@ SWITCH
 284
 Queue10
 Queue10
-0
+1
 1
 -1000
 
