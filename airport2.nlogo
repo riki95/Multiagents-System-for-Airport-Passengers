@@ -355,21 +355,26 @@ to wall-line
   ask patch -0 -10 [ set-wallline-color ]
 
   ;;left wall
-  ask patch -20 2 [ set-wallline-color ]
-  ask patch -20 3 [ set-wallline-color ]
-  ask patch -20 4 [ set-wallline-color ]
-  ask patch -20 5 [ set-wallline-color ]
-  ask patch -20 6 [ set-wallline-color ]
+
+  ask patch -20 2 [ set-entrance-color ]
+  ask patch -20 3 [ set-entrance-color ]
+  ask patch -20 4 [ set-entrance-color ]
+  ask patch -20 5 [ set-entrance-color ]
+  ask patch -20 6 [ set-entrance-color ]
   ask patch -20 7 [ set-wallline-color ]
   ask patch -20 8 [ set-wallline-color ]
   ask patch -20 9 [ set-wallline-color ]
   ask patch -20 10 [ set-wallline-color ]
 
-  ask patch -20 -2 [ set-wallline-color ]
-  ask patch -20 -3 [ set-wallline-color ]
-  ask patch -20 -4 [ set-wallline-color ]
-  ask patch -20 -5 [ set-wallline-color ]
-  ask patch -20 -6 [ set-wallline-color ]
+  ask patch -20 1 [ set-entrance-color ]
+  ask patch -20 0 [ set-entrance-color ]
+  ask patch -20 -1 [ set-entrance-color ]
+
+  ask patch -20 -2 [ set-entrance-color ]
+  ask patch -20 -3 [ set-entrance-color ]
+  ask patch -20 -4 [ set-entrance-color ]
+  ask patch -20 -5 [ set-entrance-color ]
+  ask patch -20 -6 [ set-entrance-color ]
   ask patch -20 -7 [ set-wallline-color ]
   ask patch -20 -8 [ set-wallline-color ]
   ask patch -20 -9 [ set-wallline-color ]
@@ -395,11 +400,6 @@ to wall-line
   ask patch 20 -8 [ set-wallline-color ]
   ask patch 20 -9 [ set-wallline-color ]
   ask patch 20 -10 [ set-wallline-color ]
-
-  ;;entrance
-  ask patch -20 1 [ set-entrance-color ]
-  ask patch -20 0 [ set-entrance-color ]
-  ask patch -20 -1 [ set-entrance-color ]
 
   ;;exit
   ask patch 20 1 [ set-exit-color ]
