@@ -37,19 +37,19 @@ to setup-turtles
 end
 
 to sprout-entrance
-  ask patch -20 2 [ sprout passengers-number / 12 ]
-  ask patch -20 3 [ sprout passengers-number / 12 ]
-  ask patch -20 4 [ sprout passengers-number / 12 ]
-  ask patch -20 5 [ sprout passengers-number / 12 ]
-  ask patch -20 6 [ sprout passengers-number / 12 ]
-  ask patch -20 1 [ sprout passengers-number / 12 ]
-  ask patch -20 0 [ sprout passengers-number / 12 ]
-  ask patch -20 -1 [ sprout passengers-number / 12 ]
-  ask patch -20 -2 [ sprout passengers-number / 12 ]
-  ask patch -20 -3 [ sprout passengers-number / 12 ]
-  ask patch -20 -4 [ sprout passengers-number / 12 ]
-  ask patch -20 -5 [ sprout passengers-number / 12 ]
-  ask patch -20 -6 [ sprout passengers-number / 12 ]
+  ask patch -20 2 [ sprout passengers-number / 13 ]
+  ask patch -20 3 [ sprout passengers-number / 13 ]
+  ask patch -20 4 [ sprout passengers-number / 13 ]
+  ask patch -20 5 [ sprout passengers-number / 13 ]
+  ask patch -20 6 [ sprout passengers-number / 13 ]
+  ask patch -20 1 [ sprout passengers-number / 13 ]
+  ask patch -20 0 [ sprout passengers-number / 13 ]
+  ask patch -20 -1 [ sprout passengers-number / 13 ]
+  ask patch -20 -2 [ sprout passengers-number / 13 ]
+  ask patch -20 -3 [ sprout passengers-number / 13 ]
+  ask patch -20 -4 [ sprout passengers-number / 13 ]
+  ask patch -20 -5 [ sprout passengers-number / 13 ]
+  ask patch -20 -6 [ sprout passengers-number / 13 ]
 end
 
 to create-turtles-at-entrance
@@ -797,10 +797,10 @@ SLIDER
 108
 passengers-number
 passengers-number
-12
+13
 500
-492.0
-12
+390.0
+13
 1
 NIL
 HORIZONTAL
