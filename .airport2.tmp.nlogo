@@ -28,11 +28,34 @@ to setup-patches
 end
 
 to setup-turtles
-  create-turtles passengers-number    ;; uses the value of the number slider to create turtles
-  ;;ask turtles [ setxy random-xcor random-ycor ]
-  ask turtles [ setxy -20 0 ]
+  ;;create-turtles-at-entrance
+
+  sprout-entrance
   ask turtles [ set shape "person business" ]
   ask turtles [ set size 2 ]
+
+end
+
+to sprout-entrance
+  ask patch -20 2 [ sprout passengers-number / 12 ]
+  ask patch -20 3 [ sprout passengers-number / 12 ]
+  ask patch -20 4 [ sprout passengers-number / 12 ]
+  ask patch -20 5 [ sprout passengers-number / 12 ]
+  ask patch -20 6 [ sprout passengers-number / 12 ]
+  ask patch -20 1 [ sprout passengers-number / 12 ]
+  ask patch -20 0 [ sprout passengers-number / 12 ]
+  ask patch -20 -1 [ sprout passengers-number / 12 ]
+  ask patch -20 -2 [ sprout passengers-number / 12 ]
+  ask patch -20 -3 [ sprout passengers-number / 12 ]
+  ask patch -20 -4 [ sprout passengers-number / 12 ]
+  ask patch -20 -5 [ sprout passengers-number / 12 ]
+  ask patch -20 -6 [ sprout passengers-number / 12 ]
+end
+
+to create-turtles-at-entrance
+  create-turtles passengers-number    ;; uses the value of the number slider to create turtles
+  ask turtles [ setxy random-xcor random-ycor ]
+  ask turtles [ setxy -20 0 ]
 end
 
 to update-queues
@@ -373,8 +396,8 @@ to wall-line
   ask patch -20 -2 [ set-entrance-color ]
   ask patch -20 -3 [ set-entrance-color ]
   ask patch -20 -4 [ set-entrance-color ]
-  ask patch -20 -5 [  ]
-  ask patch -20 -6 [ set-wallline-color ]
+  ask patch -20 -5 [ set-entrance-color ]
+  ask patch -20 -6 [ set-entrance-color ]
   ask patch -20 -7 [ set-wallline-color ]
   ask patch -20 -8 [ set-wallline-color ]
   ask patch -20 -9 [ set-wallline-color ]
@@ -774,10 +797,10 @@ SLIDER
 108
 passengers-number
 passengers-number
-1
+12
 500
-111.0
-5
+492.0
+12
 1
 NIL
 HORIZONTAL
@@ -961,6 +984,24 @@ false
 "" ""
 PENS
 "at metaldetector" 1.0 0 -955883 true "" "plot passengers-at-md"
+
+PLOT
+166
+357
+366
+507
+In queue
+ticks
+passengers
+0.0
+10.0
+0.0
+10.0
+true
+false
+"" ""
+PENS
+"in queue" 1.0 0 -16777216 true "" "plot passengers-in-queue"
 
 @#$#@#$#@
 ## WHAT IS IT?
@@ -1325,6 +1366,46 @@ NetLogo 6.0.4
 @#$#@#$#@
 @#$#@#$#@
 @#$#@#$#@
+<experiments>
+  <experiment name="all opened" repetitions="1" runMetricsEveryStep="true">
+    <setup>setup</setup>
+    <go>go</go>
+    <metric>count turtles</metric>
+    <enumeratedValueSet variable="Queue9">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Queue6">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Queue3">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Queue7">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="passengers-number">
+      <value value="496"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Queue4">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Queue10">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Queue1">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Queue8">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Queue5">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Queue2">
+      <value value="true"/>
+    </enumeratedValueSet>
+  </experiment>
+</experiments>
 @#$#@#$#@
 @#$#@#$#@
 default
