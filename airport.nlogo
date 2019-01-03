@@ -91,7 +91,7 @@ to go
       if (random 5 > 3) [ set xcor xcor + 1]
     ]
 
-    if ([pcolor] of patch-here = black) [
+    if ([pcolor] of patch-here = grey) [
       if (random 5 > 3) [
         face patch-at 20 0
         fd 1
@@ -136,7 +136,7 @@ end
 
 to-report passengers-at-md
 
-    set countQ count turtles-on patches with [pcolor = black ]
+    set countQ count turtles-on patches with [pcolor = grey ]
 
   report countQ
 end
@@ -168,10 +168,98 @@ to metal-detector-line
   ask patch 10 -8 [ set-metaldetector-color ]
   ask patch 10 -9 [ set-metaldetector-color ]
   ask patch 10 -10 [ set-metaldetector-color ]
+
+   ask patch 11 0 [ set-metaldetector-color ]
+  ask patch 11 1 [ set-metaldetector-color ]
+  ask patch 11 2 [ set-metaldetector-color ]
+  ask patch 11 3 [ set-metaldetector-color ]
+  ask patch 11 4 [ set-metaldetector-color ]
+  ask patch 11 5 [ set-metaldetector-color ]
+  ask patch 11 6 [ set-metaldetector-color ]
+  ask patch 11 7 [ set-metaldetector-color ]
+  ask patch 11 8 [ set-metaldetector-color ]
+  ask patch 11 9 [ set-metaldetector-color ]
+  ask patch 11 10 [ set-metaldetector-color ]
+  ask patch 11 -1 [ set-metaldetector-color ]
+  ask patch 11 -2 [ set-metaldetector-color ]
+  ask patch 11 -3 [ set-metaldetector-color ]
+  ask patch 11 -4 [ set-metaldetector-color ]
+  ask patch 11 -5 [ set-metaldetector-color ]
+  ask patch 11 -6 [ set-metaldetector-color ]
+  ask patch 11 -7 [ set-metaldetector-color ]
+  ask patch 11 -8 [ set-metaldetector-color ]
+  ask patch 11 -9 [ set-metaldetector-color ]
+  ask patch 11 -10 [ set-metaldetector-color ]
+
+   ask patch 12 0 [ set-metaldetector-color ]
+  ask patch 12 1 [ set-metaldetector-color ]
+  ask patch 12 2 [ set-metaldetector-color ]
+  ask patch 12 3 [ set-metaldetector-color ]
+  ask patch 12 4 [ set-metaldetector-color ]
+  ask patch 12 5 [ set-metaldetector-color ]
+  ask patch 12 6 [ set-metaldetector-color ]
+  ask patch 12 7 [ set-metaldetector-color ]
+  ask patch 12 8 [ set-metaldetector-color ]
+  ask patch 12 9 [ set-metaldetector-color ]
+  ask patch 12 10 [ set-metaldetector-color ]
+  ask patch 12 -1 [ set-metaldetector-color ]
+  ask patch 12 -2 [ set-metaldetector-color ]
+  ask patch 12 -3 [ set-metaldetector-color ]
+  ask patch 12 -4 [ set-metaldetector-color ]
+  ask patch 12 -5 [ set-metaldetector-color ]
+  ask patch 12 -6 [ set-metaldetector-color ]
+  ask patch 12 -7 [ set-metaldetector-color ]
+  ask patch 12 -8 [ set-metaldetector-color ]
+  ask patch 12 -9 [ set-metaldetector-color ]
+  ask patch 12 -10 [ set-metaldetector-color ]
+
+   ask patch 13 0 [ set-metaldetector-color ]
+  ask patch 13 1 [ set-metaldetector-color ]
+  ask patch 13 2 [ set-metaldetector-color ]
+  ask patch 13 3 [ set-metaldetector-color ]
+  ask patch 13 4 [ set-metaldetector-color ]
+  ask patch 13 5 [ set-metaldetector-color ]
+  ask patch 13 6 [ set-metaldetector-color ]
+  ask patch 13 7 [ set-metaldetector-color ]
+  ask patch 13 8 [ set-metaldetector-color ]
+  ask patch 13 9 [ set-metaldetector-color ]
+  ask patch 13 10 [ set-metaldetector-color ]
+  ask patch 13 -1 [ set-metaldetector-color ]
+  ask patch 13 -2 [ set-metaldetector-color ]
+  ask patch 13 -3 [ set-metaldetector-color ]
+  ask patch 13 -4 [ set-metaldetector-color ]
+  ask patch 13 -5 [ set-metaldetector-color ]
+  ask patch 13 -6 [ set-metaldetector-color ]
+  ask patch 13 -7 [ set-metaldetector-color ]
+  ask patch 13 -8 [ set-metaldetector-color ]
+  ask patch 13 -9 [ set-metaldetector-color ]
+  ask patch 13 -10 [ set-metaldetector-color ]
+
+   ask patch 14 0 [ set-metaldetector-color ]
+  ask patch 14 1 [ set-metaldetector-color ]
+  ask patch 14 2 [ set-metaldetector-color ]
+  ask patch 14 3 [ set-metaldetector-color ]
+  ask patch 14 4 [ set-metaldetector-color ]
+  ask patch 14 5 [ set-metaldetector-color ]
+  ask patch 14 6 [ set-metaldetector-color ]
+  ask patch 14 7 [ set-metaldetector-color ]
+  ask patch 14 8 [ set-metaldetector-color ]
+  ask patch 14 9 [ set-metaldetector-color ]
+  ask patch 14 10 [ set-metaldetector-color ]
+  ask patch 14 -1 [ set-metaldetector-color ]
+  ask patch 14 -2 [ set-metaldetector-color ]
+  ask patch 14 -3 [ set-metaldetector-color ]
+  ask patch 14 -4 [ set-metaldetector-color ]
+  ask patch 14 -5 [ set-metaldetector-color ]
+  ask patch 14 -6 [ set-metaldetector-color ]
+  ask patch 14 -7 [ set-metaldetector-color ]
+  ask patch 14 -8 [ set-metaldetector-color ]
+  ask patch 14 -9 [ set-metaldetector-color ]
+  ask patch 14 -10 [ set-metaldetector-color ]
 end
 
 to set-metaldetector-color
-  set pcolor black
+  set pcolor grey
 end
 
 to wall-line
@@ -701,7 +789,7 @@ SWITCH
 166
 Queue1
 Queue1
-1
+0
 1
 -1000
 
@@ -712,7 +800,7 @@ SWITCH
 166
 Queue2
 Queue2
-1
+0
 1
 -1000
 
@@ -753,7 +841,7 @@ SWITCH
 166
 Queue3
 Queue3
-1
+0
 1
 -1000
 
@@ -797,7 +885,7 @@ SWITCH
 245
 Queue7
 Queue7
-1
+0
 1
 -1000
 
@@ -808,7 +896,7 @@ SWITCH
 245
 Queue8
 Queue8
-1
+0
 1
 -1000
 
@@ -819,7 +907,7 @@ SWITCH
 245
 Queue9
 Queue9
-1
+0
 1
 -1000
 
@@ -830,7 +918,7 @@ SWITCH
 284
 Queue10
 Queue10
-1
+0
 1
 -1000
 
