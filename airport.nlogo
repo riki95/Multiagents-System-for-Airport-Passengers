@@ -776,7 +776,7 @@ passengers-number
 passengers-number
 1
 500
-101.0
+496.0
 5
 1
 NIL
@@ -800,7 +800,7 @@ SWITCH
 166
 Queue2
 Queue2
-0
+1
 1
 -1000
 
@@ -841,7 +841,7 @@ SWITCH
 166
 Queue3
 Queue3
-0
+1
 1
 -1000
 
@@ -852,7 +852,7 @@ SWITCH
 206
 Queue4
 Queue4
-0
+1
 1
 -1000
 
@@ -874,7 +874,7 @@ SWITCH
 206
 Queue6
 Queue6
-0
+1
 1
 -1000
 
@@ -885,7 +885,7 @@ SWITCH
 245
 Queue7
 Queue7
-0
+1
 1
 -1000
 
@@ -896,7 +896,7 @@ SWITCH
 245
 Queue8
 Queue8
-0
+1
 1
 -1000
 
@@ -907,7 +907,7 @@ SWITCH
 245
 Queue9
 Queue9
-0
+1
 1
 -1000
 
@@ -965,39 +965,44 @@ PENS
 @#$#@#$#@
 ## WHAT IS IT?
 
-(a general understanding of what the model is trying to show or explain)
+It is a system for monitoring and study queues in airport with the increase or decrease of some values, like the passengers number inside the airport or the queues available.
 
 ## HOW IT WORKS
 
-(what rules the agents use to create the overall behavior of the model)
+Every agent change his behaviour basing on the colour of the patches it has on his current position or in front of it.
+For example the brown indicates the wall of the airport and you cannot go on it, but the green means that the queue is opened and you can go inside.
 
 ## HOW TO USE IT
 
-(how to use the model, including a description of each of the items in the Interface tab)
+You can press on Queues buttons to open or close a queue. Then you can increase or decreas the number of passengers, press setup and you are ready.
+When you press GO, the passengers will enter inside the airport and start going around.
+During the simulation, you can close queues and they will start going around again until they find another queue to go in.
 
 ## THINGS TO NOTICE
 
-(suggested things for the user to notice while running the model)
+There are 2 graphics. They monitor the passengers in queue and at metal detector. You can check this numbers so study the simulation.
 
 ## THINGS TO TRY
 
-(suggested things for the user to try to do (move sliders, switches, etc.) with the model)
+Try to open all queues or just open one. You will notice that the passengers make a lot of time to exit from the airport or not.
 
 ## EXTENDING THE MODEL
 
-(suggested things to add or change in the Code tab to make the model more complicated, detailed, accurate, etc.)
+You can add queue for baggage before the queue for metal detector and also the queue for the airplane after the queue for metal detector.
 
 ## NETLOGO FEATURES
 
-(interesting or unusual features of NetLogo that the model uses, particularly in the Code tab; or where workarounds were needed for missing features)
+On the Tools --> Behaviour space there are some experiments you can run and watch to the data to make analysis. Inside the code, there are a lot of functions to draw the patches and turtles. You can inspire from it to make your own simulation. All the movements from turtles are done with the GO procedure.
 
 ## RELATED MODELS
 
-(models in the NetLogo Models Library and elsewhere which are of related interest)
+There are no related models because this is a totally different model from what you can actually find inside Netlogo Model Library. The only thing which is common is the random walk which is similar to some social contagion or wolf-sheep walk simulations.
 
 ## CREDITS AND REFERENCES
 
-(a reference to the model's URL on the web if it has one, as well as any other necessary credits, citations, and links)
+Riccardo Basso - Università degli Studi di Genova
+My Github: https://github.com/riki95
+My Repo: https://github.com/riki95/Multiagents-System-for-Airport-Passengers
 @#$#@#$#@
 default
 true
