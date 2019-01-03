@@ -789,7 +789,7 @@ SWITCH
 166
 Queue1
 Queue1
-1
+0
 1
 -1000
 
@@ -841,7 +841,7 @@ SWITCH
 166
 Queue3
 Queue3
-1
+0
 1
 -1000
 
@@ -852,7 +852,7 @@ SWITCH
 206
 Queue4
 Queue4
-1
+0
 1
 -1000
 
@@ -863,7 +863,7 @@ SWITCH
 206
 Queue5
 Queue5
-1
+0
 1
 -1000
 
@@ -874,7 +874,7 @@ SWITCH
 206
 Queue6
 Queue6
-1
+0
 1
 -1000
 
@@ -885,7 +885,7 @@ SWITCH
 245
 Queue7
 Queue7
-1
+0
 1
 -1000
 
@@ -907,7 +907,7 @@ SWITCH
 245
 Queue9
 Queue9
-1
+0
 1
 -1000
 
@@ -918,7 +918,7 @@ SWITCH
 284
 Queue10
 Queue10
-1
+0
 1
 -1000
 
@@ -1326,7 +1326,7 @@ NetLogo 6.0.4
 @#$#@#$#@
 @#$#@#$#@
 <experiments>
-  <experiment name="experiment" repetitions="3" runMetricsEveryStep="true">
+  <experiment name="experiment" repetitions="1" runMetricsEveryStep="true">
     <setup>setup</setup>
     <go>go</go>
     <exitCondition>count turtles = 0</exitCondition>
@@ -1335,7 +1335,6 @@ NetLogo 6.0.4
     <metric>passengers-at-md</metric>
     <enumeratedValueSet variable="Queue9">
       <value value="true"/>
-      <value value="false"/>
     </enumeratedValueSet>
     <enumeratedValueSet variable="Queue6">
       <value value="true"/>
@@ -1355,11 +1354,9 @@ NetLogo 6.0.4
     </enumeratedValueSet>
     <enumeratedValueSet variable="Queue10">
       <value value="true"/>
-      <value value="false"/>
     </enumeratedValueSet>
     <enumeratedValueSet variable="Queue1">
       <value value="true"/>
-      <value value="false"/>
     </enumeratedValueSet>
     <enumeratedValueSet variable="Queue8">
       <value value="true"/>
@@ -1367,11 +1364,9 @@ NetLogo 6.0.4
     </enumeratedValueSet>
     <enumeratedValueSet variable="Queue5">
       <value value="true"/>
-      <value value="false"/>
     </enumeratedValueSet>
     <enumeratedValueSet variable="Queue2">
       <value value="true"/>
-      <value value="false"/>
     </enumeratedValueSet>
     <enumeratedValueSet variable="passengers-number">
       <value value="101"/>
