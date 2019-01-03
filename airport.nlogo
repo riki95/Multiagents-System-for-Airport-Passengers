@@ -776,7 +776,7 @@ passengers-number
 passengers-number
 1
 500
-111.0
+101.0
 5
 1
 NIL
@@ -789,7 +789,7 @@ SWITCH
 166
 Queue1
 Queue1
-0
+1
 1
 -1000
 
@@ -841,7 +841,7 @@ SWITCH
 166
 Queue3
 Queue3
-0
+1
 1
 -1000
 
@@ -852,7 +852,7 @@ SWITCH
 206
 Queue4
 Queue4
-0
+1
 1
 -1000
 
@@ -863,7 +863,7 @@ SWITCH
 206
 Queue5
 Queue5
-0
+1
 1
 -1000
 
@@ -874,7 +874,7 @@ SWITCH
 206
 Queue6
 Queue6
-0
+1
 1
 -1000
 
@@ -885,7 +885,7 @@ SWITCH
 245
 Queue7
 Queue7
-0
+1
 1
 -1000
 
@@ -907,7 +907,7 @@ SWITCH
 245
 Queue9
 Queue9
-0
+1
 1
 -1000
 
@@ -918,7 +918,7 @@ SWITCH
 284
 Queue10
 Queue10
-0
+1
 1
 -1000
 
@@ -1325,6 +1325,59 @@ NetLogo 6.0.4
 @#$#@#$#@
 @#$#@#$#@
 @#$#@#$#@
+<experiments>
+  <experiment name="experiment" repetitions="3" runMetricsEveryStep="true">
+    <setup>setup</setup>
+    <go>go</go>
+    <exitCondition>count turtles = 0</exitCondition>
+    <metric>count turtles</metric>
+    <metric>passengers-in-queue</metric>
+    <metric>passengers-at-md</metric>
+    <enumeratedValueSet variable="Queue9">
+      <value value="true"/>
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Queue6">
+      <value value="true"/>
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Queue3">
+      <value value="true"/>
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Queue7">
+      <value value="true"/>
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Queue4">
+      <value value="true"/>
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Queue10">
+      <value value="true"/>
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Queue1">
+      <value value="true"/>
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Queue8">
+      <value value="true"/>
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Queue5">
+      <value value="true"/>
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="Queue2">
+      <value value="true"/>
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="passengers-number">
+      <value value="101"/>
+    </enumeratedValueSet>
+  </experiment>
+</experiments>
 @#$#@#$#@
 @#$#@#$#@
 default
