@@ -15,7 +15,7 @@ git clone https://github.com/riki95/Multiagents-System-for-Airport-Passengers
 The program was written and executed with [Netlogo](https://ccl.northwestern.edu/netlogo/).
 Once it's installed, just click on the program and press "Open" to open my .nlogo file.
 
-### Interface and behaviour
+## Interface and behaviour
 
 ![Interface](https://i.gyazo.com/c87fb1f55dc0e388e18af169d394ab79.png)
 
@@ -26,6 +26,10 @@ Pressing "Go" you will make the passengers move in nontrivial ways.
 If they hit a green patches, they enter the queue and go to the metal detector, which is colored by grey.
 If they meet a red, the queue is closed and they go back.
 After they have been scanned at the metal detector, they face the yellow patches which is the exit and they get out.
+
+### Demo
+![Demo](https://im4.ezgif.com/tmp/ezgif-4-e81fd52b9249.gif)
+
 
 ## Monitors and study
 
