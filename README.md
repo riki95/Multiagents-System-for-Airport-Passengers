@@ -23,8 +23,8 @@ The interface is quite simple.
 You can open/close queues and increase or decrease the number of passengers.
 When you clic on Setup the passengers are at the entrance of the airport. 
 Pressing "Go" you will make the passengers move in nontrivial ways. 
-If they hit a green patches, they enter the queue and go to the metal detector, which is colored by grey.
-If they meet a red, the queue is closed and they go back.
+If they hit a green patch, they enter the queue and go to the metal detector, which is coloured by grey.
+If they meet a red, the queue is closed, and they go back.
 After they have been scanned at the metal detector, they face the yellow patches which is the exit and they get out.
 
 ### Demo
