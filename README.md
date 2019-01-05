@@ -28,7 +28,7 @@ If they meet a red, the queue is closed, and they go back.
 After they have been scanned at the metal detector, they face the yellow patches which is the exit and they get out.
 
 ### Demo
-![Demo](https://im4.ezgif.com/tmp/ezgif-4-e81fd52b9249.gif)
+![Demo](https://media.giphy.com/media/8Ttd5CNderXrZadqRn/giphy.gif)
 
 
 ## Monitors and study
